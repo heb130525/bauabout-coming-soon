@@ -12,7 +12,7 @@
     :root {
       --paper: #ffffff;
       --ink: #141414;
-      --orange: #E93604;
+      --orange: #DA3714;
       --line: rgba(20, 20, 20, .24);
     }
 
@@ -97,16 +97,16 @@
       color: var(--orange);
       animation: blinkText 1.8s ease-in-out infinite;
 }
-    }
+    
 
 
 
     .email {
-  margin: clamp(18px, 2vw, 30px) 0 0;
-  font-size: clamp(19px, 1.55vw, 27px);
+  margin: clamp(28px, 2.6vw, 42px) 0 0;
+  font-size: clamp(21px, 1.75vw, 30px);
   font-weight: 300;
   letter-spacing: .02em;
-  color: var(--orange);
+  color: var(--ink);
 }
 
     .bottom {
@@ -128,30 +128,38 @@
     
 
     @media (max-width: 700px) {
-      .page {
-        padding: 18px 16px;
-      }
+  .page {
+    padding: 18px 16px;
+  }
 
-      .logo { width: 104px; }
+  .logo {
+    width: 104px;
+  }
 
-      .center { padding: 11vh 0; }
+  .center {
+    padding: 11vh 0;
+  }
 
-      .main-status {
-        gap: 9px;
-        font-size: clamp(27px, 8.2vw, 54px);
-        letter-spacing: -.06em;
-      }
+  .main-status {
+    gap: 9px;
+    font-size: clamp(27px, 8.2vw, 54px);
+    letter-spacing: -.06em;
+  }
 
+  .email {
+    margin: clamp(18px, 2vw, 30px) 0 0;
+    font-size: clamp(19px, 1.55vw, 27px);
+  }
 
+  .bottom {
+    align-items: flex-end;
+    font-size: 9px;
+  }
 
-      .bottom {
-        align-items: flex-end;
-        font-size: 9px;
-      }
-
-      .bottom p:last-child { text-align: right; }
-    }
-
+  .bottom p:last-child {
+    text-align: right;
+  }
+}
     @media (prefers-reduced-motion: reduce) {
       .dot { animation: none; }
     }
@@ -170,7 +178,7 @@
 
     <footer class="bottom">
       <p>Graphic design studio</p>
-      <p>We’ll be back soon.</p>
+      <p>Coming soon.</p>
     </footer>
   </main>
 </body>
