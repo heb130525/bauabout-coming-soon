@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f1efe9">
+  <title>BAUABOUT — Coming Soon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+    :root {
+      --paper: #ffffff;
+      --ink: #141414;
+      --orange: #E93604;
+      --line: rgba(20, 20, 20, .24);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      overflow: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Readex Pro", Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      min-height: 100svh;
+      padding: clamp(22px, 3.2vw, 48px);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .logo {
+      display: block;
+      width: clamp(108px, 9vw, 154px);
+      height: auto;
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      font-size: clamp(10px, .8vw, 13px);
+      font-weight: 700;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      white-space: nowrap;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: blink 1.8s ease-in-out infinite;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8vh 0;
+    }
+
+    .main-status {
+      margin: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: clamp(11px, 1.15vw, 20px);
+      font-size: clamp(30px, 5.4vw, 96px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -.055em;
+      white-space: nowrap;
+      color: var(--orange);
+    }
+
+    .main-status .dot {
+      width: clamp(13px, 1.15vw, 21px);
+      height: clamp(13px, 1.15vw, 21px);
+      flex: 0 0 auto;
+    }
+
+    .email {
+      margin: clamp(18px, 2vw, 30px) 0 0;
+      font-size: clamp(15px, 1.15vw, 20px);
+      font-weight: 400;
+      letter-spacing: .02em;
+    }
+
+    .bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 15px;
+    }
+
+    .bottom p { margin: 0; }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .25; transform: scale(.72); }
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 18px 16px;
+      }
+
+      .logo { width: 104px; }
+
+      .center { padding: 11vh 0; }
+
+      .main-status {
+        gap: 9px;
+        font-size: clamp(27px, 8.2vw, 54px);
+        letter-spacing: -.06em;
+      }
+
+      .main-status .dot {
+        width: 14px;
+        height: 14px;
+      }
+
+      .bottom {
+        align-items: flex-end;
+        font-size: 9px;
+      }
+
+      .bottom p:last-child { text-align: right; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .dot { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="logo-wrap">
+      <img class="logo" src="bauabout-logo.png" alt="BAUABOUT">
+    </header>
+
+    <section class="center" aria-label="Website in progress">
+      <h1 class="main-status"><span class="dot" aria-hidden="true"></span>Website in progress</h1>
+      <p class="email">email: hello@bauabout.co.kr</p>
+    </section>
+
+    <footer class="bottom">
+      <p>Graphic design studio</p>
+      <p>We’ll be back soon.</p>
+    </footer>
+  </main>
+</body>
+</html>
